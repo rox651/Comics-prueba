@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,0.711922268907563) 0%, rgba(249,126,96,1) 0%, rgba(103,123,233,1) 98%);
+}
+
+.card{
+  display: flex;
+  background-color: aliceblue;
+  width: 400px;
+  height: 560px;
+  margin: 5px auto;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 11px;
+  overflow: hidden;
+  animation: cardTransition 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.card-img img{
+  max-width: 180px;
+  max-height: 230px;
+  margin: 10px;
+  filter: contrast(80%);
+
+}
+
+.card-paragraph{
+  width: 300px;
+  height: 100px;
+
+}
+
+.btn-container{
+ margin: 20px 0;
+}
+
+
+.btn-container button{
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  background-color: rgb(146, 30, 26);
+  color: #fff;
+  cursor: pointer;
+}
+
+#btn-random{
+  margin-top: 20px;
+  padding: 10px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border: none;
+  background-color: rgb(146, 30, 26);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.btn-container button:hover, #btn-random:hover{
+  background-color: rgb(174, 77, 73);
+}
+
+@keyframes cardTransition {
+  0%{
+   transform: translateY(-90%);
+    opacity: 0.3;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .card{
+    width: 350px;
+    font-size: 10px;
+  }
+  .card .card-paragraph{
+    height: 80px;
+    width: 320px;
+  }
+  #btn-random{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .card{
+    width: 250px;
+    font-size: 8px;
+  }
+  .card .card-paragraph{
+    height: 80px;
+    width: 220px;
+  }
+  #btn-random{
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 260px){
+  .card{
+    width: 200px;
+    font-size: 8px;
+  }
+  .card .card-paragraph{
+    height: 80px;
+    width: 190px;
+  }
+  #btn-random{
+    margin-top: 30px;
+  }
+}
+
